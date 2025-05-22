@@ -1,45 +1,97 @@
 import 'package:flutter/material.dart';
 
 class LatihanKedua extends StatefulWidget {
+  const LatihanKedua({Key? key}) : super(key: key);
+
   @override
   _LatihanKeduaState createState() => _LatihanKeduaState();
 }
 
 class _LatihanKeduaState extends State<LatihanKedua> {
-  int nomor = 0;
+  int _counter = 0;
 
-  void tekanTombol() {
+  void _incrementCounter() {
     setState(() {
-      nomor = nomor + 1;
-      print(nomor);
+      _counter++;
+    });
+  }
+
+  void _decrementCounter() {
+    setState(() {
+      if (_counter > 0) {
+        _counter--;
+      }
+    });
+  }
+
+  void _resetCounter() {
+    setState(() {
+      _counter = 0;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('Statefull Widget')),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(nomor.toString(), style: TextStyle(fontSize: 50.0)),
-              SizedBox(height: 20.0),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue, // Background color
-                  padding: EdgeInsets.all(20.0), // Padding
-                ),
-                icon: Icon(Icons.add, color: Colors.white),
-                label: Text(
-                  'Tambah Bilangan',
-                  style: TextStyle(fontSize: 20.0, color: Colors.white),
-                ),
-                onPressed: tekanTombol,
+    return Scaffold(
+      appBar: AppBar(title: const Text('Stateful Widget')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              '$_counter',
+              style: const TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue,
               ),
-            ],
-          ),
+            ),
+            const SizedBox(height: 30),
+            SizedBox(
+              width: 200,
+              child: ElevatedButton(
+                onPressed: _incrementCounter,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                ),
+                child: const Text('+ Tambah Bilangan'),
+              ),
+            ),
+            const SizedBox(height: 15),
+            SizedBox(
+              width: 200,
+              child: ElevatedButton(
+                onPressed: _decrementCounter,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                ),
+                child: const Text('- Kurangi Bilangan'),
+              ),
+            ),
+            const SizedBox(height: 15),
+            SizedBox(
+              width: 200,
+              child: ElevatedButton(
+                onPressed: _resetCounter,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                ),
+                child: const Text('Delete Bilangan'),
+              ),
+            ),
+          ],
         ),
       ),
     );
