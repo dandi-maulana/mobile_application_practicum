@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_application_practicum/pages/luas_segitiga.dart';
+import 'package:mobile_application_practicum/pages/latihan_layout.dart';
 
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Latihan Kedua",
-      home: LuasSegitiga(),
+      title: "Latihan Layout",
+      home: LatihanLayout(),
     ),
   );
 }
