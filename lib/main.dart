@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_application_practicum/pages/whatapp.dart';
+import 'package:mobile_application_practicum/pages/wisata_aplikasi.dart';
 
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "WhatsAppApp",
-      home: WhatsAppApp(),
+      title: "Praktikum Kelima",
+      home: AppWisata(),
     ),
   );
 }

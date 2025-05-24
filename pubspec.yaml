@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   image_network: ^2.6.0
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:
@@ -89,6 +90,11 @@ flutter:
     - assets/avatars/avatar9.jpg
     - assets/avatars/avatar10.jpg
 
+    - assets/images/candi.jpeg
+    - assets/images/danau_toba.jpeg
+    - assets/images/kuta.jpeg
+    
+   
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
