@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './pages/multiprov/main.dart';
+import './pages/data_crud/main.dart';
 
 void main(List<String> args) {
   runApp(MyWidget());
@@ -10,6 +10,6 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: "MultiProv", home: const MyApp());
+    return MaterialApp(title: "My_store", home: const Home());
   }
 }
