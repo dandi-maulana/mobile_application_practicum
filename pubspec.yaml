@@ -39,6 +39,7 @@ dependencies:
   http: ^1.4.0      # Versi terbaru http (null safety supported)
   fluttertoast: ^8.2.12
   provider: ^6.1.5
+  google_maps_flutter: ^2.12.3
 
 dev_dependencies:
   flutter_test:
