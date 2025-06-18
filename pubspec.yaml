@@ -38,6 +38,7 @@ dependencies:
   shared_preferences: ^2.5.3
   http: ^1.4.0      # Versi terbaru http (null safety supported)
   fluttertoast: ^8.2.12
+  provider: ^6.1.5
 
 dev_dependencies:
   flutter_test:
